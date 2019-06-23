@@ -35,7 +35,8 @@
 
         });
         infoWindow = new google.maps.InfoWindow;
-
+        
+        
 
           var drawingManager = new google.maps.drawing.DrawingManager({
           drawingMode: google.maps.drawing.OverlayType.MARKER,
@@ -44,7 +45,7 @@
             position: google.maps.ControlPosition.TOP_CENTER,
             drawingModes: ['marker', 'circle']
           },
-          markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+       
          });
         drawingManager.setMap(map);
 
@@ -55,9 +56,9 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-
+            
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('Su Ubicacion');
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
